@@ -36,8 +36,6 @@ const OrganizationSearch = ({ organizationName, onOrganizationSearch }: Organiza
   const [value, setValue] = useState(organizationName);
   
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value);
-    
     setValue(event.target.value);
   };
 
