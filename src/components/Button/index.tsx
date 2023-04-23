@@ -5,12 +5,10 @@ const Button = ({
   children,
   className,
   color = "black",
-  type = "button",
   ...props
 }: ButtonProps) => (
   <button
     className={`${className} Button Button_${color}`}
-    type={type}
     {...props}
   >
     {children}
@@ -20,13 +18,11 @@ const Button = ({
 const ButtonUnobtrusive = ({
   children,
   className,
-  type = "button",
-  onClick,
+  ...props
 }: ButtonUnobtrusiveProps) => (
   <button
     className={`${className} Button_unobtrusive`}
-    type={type}
-    onClick={onClick}
+    {...props}
   >
     {children}
   </button>

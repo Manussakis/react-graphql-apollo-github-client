@@ -1,14 +1,7 @@
-import { ReactNode } from "react";
+import { ComponentPropsWithoutRef } from "react";
 
-interface RawButtonProps {
-  children: ReactNode;
-  className?: string;
-  type?: 'button' | 'submit' | 'reset' | undefined;
-  onClick?: () => void
-}
-
-export interface ButtonProps extends RawButtonProps {
+export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
   color?: string;
 }
 
-export interface ButtonUnobtrusiveProps extends RawButtonProps{}
+export interface ButtonUnobtrusiveProps extends ComponentPropsWithoutRef<'button'> {}
